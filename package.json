@@ -1,0 +1,87 @@
+{
+  "name": "logo-draw-animation",
+  "version": "0.1.0",
+  "description": "Turn any SVG into a self-drawing stroke animation. Zero runtime dependencies, SSR-safe, tree-shakable. ESM + CJS.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "svg",
+    "svg-animation",
+    "draw",
+    "draw-svg",
+    "stroke",
+    "stroke-dashoffset",
+    "logo",
+    "logo-animation",
+    "react",
+    "animation",
+    "line-drawing"
+  ],
+  "author": "Lider Bektaş",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liderbektas/logo-draw-animation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/liderbektas/logo-draw-animation/issues"
+  },
+  "homepage": "https://github.com/liderbektas/logo-draw-animation#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^10.5.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "jsdom": "^29.1.1",
+    "prettier": "^3.8.4",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.62.0",
+    "vitest": "^4.1.9"
+  }
+}
